@@ -1,0 +1,143 @@
+{
+    "name": "Files",
+    "path": "Files",
+    "type": "directory",
+    "children": [
+        {
+            "name": "CSP",
+            "path": "Files/CSP",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "#578.cpp",
+                    "path": "Files/CSP/#578.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-A.cpp",
+                    "path": "Files/CSP/2021-j-A.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-B.cpp",
+                    "path": "Files/CSP/2021-j-B.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-C.cpp",
+                    "path": "Files/CSP/2021-j-C.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-D.cpp",
+                    "path": "Files/CSP/2021-j-D.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-A.cpp",
+                    "path": "Files/CSP/2022-j-A.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-B.cpp",
+                    "path": "Files/CSP/2022-j-B.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-C.cpp",
+                    "path": "Files/CSP/2022-j-C.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-D.cpp",
+                    "path": "Files/CSP/2022-j-D.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2023-j-B.cpp",
+                    "path": "Files/CSP/2023-j-B.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2023-j-C.cpp",
+                    "path": "Files/CSP/2023-j-C.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1168.cpp",
+                    "path": "Files/CSP/lg_p1168.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "p0046.cpp",
+                    "path": "Files/CSP/p0046.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "p0047.cpp",
+                    "path": "Files/CSP/p0047.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "p1053.cpp",
+                    "path": "Files/CSP/p1053.cpp",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "Examples",
+            "path": "Files/Examples",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "Bi_Search.cpp",
+                    "path": "Files/Examples/Bi_Search.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "Eulerprime.cpp",
+                    "path": "Files/Examples/Eulerprime.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "Gcd.cpp",
+                    "path": "Files/Examples/Gcd.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "ST.cpp",
+                    "path": "Files/Examples/ST.cpp",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "Myfiles",
+            "path": "Files/Myfiles",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "command.txt",
+                    "path": "Files/Myfiles/command.txt",
+                    "type": "file"
+                },
+                {
+                    "name": "profile.txt",
+                    "path": "Files/Myfiles/profile.txt",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "directory_structure.json",
+            "path": "Files/directory_structure.json",
+            "type": "file"
+        },
+        {
+            "name": "readme.txt",
+            "path": "Files/readme.txt",
+            "type": "file"
+        }
+    ]
+}

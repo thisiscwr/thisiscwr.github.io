@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+</head>
+<body>
+    <div id="navigation-bar">
+        <div id="breadcrumb" class="breadcrumb"></div>
+    </div>
+
+    <div id="file-view">
+        <table>
+            <tbody id="file-list">
+                <!-- 文件和文件夹项将动态添加 -->
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div id="file-content" style="display: none;">
+        <h1 id="file-title"></h1>
+        <div id="file-data"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
