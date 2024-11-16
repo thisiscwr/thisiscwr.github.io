@@ -118,8 +118,40 @@
             "type": "directory",
             "children": [
                 {
+                    "name": "Source",
+                    "path": "Files/Myfiles/Source",
+                    "type": "directory",
+                    "children": [
+                        {
+                            "name": "get_struct.py",
+                            "path": "Files/Myfiles/Source/get_struct.py",
+                            "type": "file"
+                        },
+                        {
+                            "name": "index.html",
+                            "path": "Files/Myfiles/Source/index.html",
+                            "type": "file"
+                        },
+                        {
+                            "name": "script.js",
+                            "path": "Files/Myfiles/Source/script.js",
+                            "type": "file"
+                        },
+                        {
+                            "name": "styles.css",
+                            "path": "Files/Myfiles/Source/styles.css",
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
                     "name": "command.txt",
                     "path": "Files/Myfiles/command.txt",
+                    "type": "file"
+                },
+                {
+                    "name": "githubkey.txt",
+                    "path": "Files/Myfiles/githubkey.txt",
                     "type": "file"
                 },
                 {
