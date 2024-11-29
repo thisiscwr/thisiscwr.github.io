@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cwr's Files</title>
-    <script src="highlight/hightlight.js"></script>
-    <link rel="stylesheet" href="styles.css"> <!-- 您的自定义样式 -->
-    
-
+    <title>Cwr's Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="/CodeEditor/" target="_blank">Code Editor</a>
-    <h1>Cwr's Files</h1>
-    <div id="navigation-bar">
-        <div id="breadcrumb" class="breadcrumb"></div>
-    </div>
+    <header>
+        <h1>欢迎来到我的网站</h1>
+    </header>
+    <main>
+        <section class="game-list">
+            <article>
+                <h2><a href="CodeEditor/" class="link">代码编辑器</a></h2>
+                <p>在线编辑代码</p>
+            </article>
+            <article>
+                <h2><a href="MyFiles/" class="link">个人文件</a></h2>
+                <p>云端存储文件</p>
+            </article>
+            <article>
+                <h2><a href="Games/" class="link">游戏</a></h2>
+                <p>在线玩游戏</p>
+            </article>
 
-    <div id="file-view">
-        <table>
-            <tbody id="file-list">
-                <!-- 文件和文件夹项将动态添加 -->
-            </tbody>
-        </table>
-    </div>
-    
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 游戏展示网站. 版权所有.</p>
+    </footer>
 
-    <div id="file-content" style="display: none;">
-        <h1 id="file-title"></h1>
-        <div id="file-data"></div>
-    </div>
-    
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
