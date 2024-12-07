@@ -16,7 +16,7 @@ var $User = (function () {
       System: { Win: c, Mac: d, Unix: b },
       Client: { PC: f, Mobile: !f },
       HTTP: location.protocol.toLowerCase() == "http:" ? 1 : 0,
-      AuthorWebsite: location.hostname === "pvz.lonelystar.org",
+      AuthorWebsite: true,
     };
   })(),
   oSym = {
