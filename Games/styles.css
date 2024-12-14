@@ -32,7 +32,7 @@ article {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 0 0 calc(30% - 20px); /* 设置宽度为 30%，可以在一行放三个游戏 */
+  flex: 0 0 calc(40% - 10px); /* 设置宽度为 30%，可以在一行放三个游戏 */
 }
 
 footer {
