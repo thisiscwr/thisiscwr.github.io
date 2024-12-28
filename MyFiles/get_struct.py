@@ -24,7 +24,7 @@ root_directory = 'Files'  # 请根据实际情况修改此路径
 structure = path_to_dict(root_directory)
 
 # 将结构写入 JSON 文件
-json_file_path = 'Files/directory_structure.json'
+json_file_path = "Files/dir_structure.json"
 with open(json_file_path, 'w', encoding='utf-8') as json_file:
     json.dump(structure, json_file, ensure_ascii=False, indent=4)
 

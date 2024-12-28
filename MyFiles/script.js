@@ -3,7 +3,7 @@ let breadcrumbPath = [];
 let directoryData = {}; // 存储加载的目录数据
 
 function loadInitialDirectory() {
-    fetch('Files/directory_structure.json')
+    fetch('Files/dir_structure.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok: ' + response.statusText);

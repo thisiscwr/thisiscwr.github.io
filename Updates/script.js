@@ -3,7 +3,7 @@ async function loadUpdates() {
   try {
     const response = await fetch("updates.json");
     const updates = await response.json();
-    const updateList = document.getElementById("logs");
+    const updateList = document.getElementById("items");
 
     // 遍历JSON对象并生成列表项
     for (vals in updates) {
@@ -12,6 +12,7 @@ async function loadUpdates() {
       const p = document.createElement("p");
       const h2 = document.createElement("h2");
       a.href = updates[vals].thelink;
+      a.className = "link";
       a.textContent = `${updates[vals].title}`;
       p.textContent = `${updates[vals].thetext}`;
       h2.appendChild(a);

@@ -1,0 +1,255 @@
+{
+    "name": "Files",
+    "path": "Files",
+    "type": "directory",
+    "children": [
+        {
+            "name": "CSP",
+            "path": "Files/CSP",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "2021-j-A.cpp",
+                    "path": "Files/CSP/2021-j-A.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-B.cpp",
+                    "path": "Files/CSP/2021-j-B.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-C.cpp",
+                    "path": "Files/CSP/2021-j-C.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2021-j-D.cpp",
+                    "path": "Files/CSP/2021-j-D.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-A.cpp",
+                    "path": "Files/CSP/2022-j-A.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-B.cpp",
+                    "path": "Files/CSP/2022-j-B.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-C.cpp",
+                    "path": "Files/CSP/2022-j-C.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2022-j-D.cpp",
+                    "path": "Files/CSP/2022-j-D.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2023-j-B.cpp",
+                    "path": "Files/CSP/2023-j-B.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "2023-j-C.cpp",
+                    "path": "Files/CSP/2023-j-C.cpp",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "GZZX_OJ",
+            "path": "Files/GZZX_OJ",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "gz_p0003.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0003.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0018.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0018.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0022.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0022.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0044.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0044.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0046.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0046.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0047.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0047.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0068.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0068.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0081.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0081.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0167.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0167.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p0226.cpp",
+                    "path": "Files/GZZX_OJ/gz_p0226.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p1053.cpp",
+                    "path": "Files/GZZX_OJ/gz_p1053.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p2054.cpp",
+                    "path": "Files/GZZX_OJ/gz_p2054.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p473.cpp",
+                    "path": "Files/GZZX_OJ/gz_p473.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "gz_p578.cpp",
+                    "path": "Files/GZZX_OJ/gz_p578.cpp",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "LUOGU",
+            "path": "Files/LUOGU",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "lg.cpp",
+                    "path": "Files/LUOGU/lg.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1008.cpp",
+                    "path": "Files/LUOGU/lg_p1008.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1010.cpp",
+                    "path": "Files/LUOGU/lg_p1010.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1011.cpp",
+                    "path": "Files/LUOGU/lg_p1011.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1015.cpp",
+                    "path": "Files/LUOGU/lg_p1015.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1035.cpp",
+                    "path": "Files/LUOGU/lg_p1035.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1042.cpp",
+                    "path": "Files/LUOGU/lg_p1042.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1044.cpp",
+                    "path": "Files/LUOGU/lg_p1044.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1046.cpp",
+                    "path": "Files/LUOGU/lg_p1046.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1048.cpp",
+                    "path": "Files/LUOGU/lg_p1048.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1051.cpp",
+                    "path": "Files/LUOGU/lg_p1051.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1055.cpp",
+                    "path": "Files/LUOGU/lg_p1055.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1068.cpp",
+                    "path": "Files/LUOGU/lg_p1068.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1104.cpp",
+                    "path": "Files/LUOGU/lg_p1104.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1147.cpp",
+                    "path": "Files/LUOGU/lg_p1147.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1168.cpp",
+                    "path": "Files/LUOGU/lg_p1168.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p1187.cpp",
+                    "path": "Files/LUOGU/lg_p1187.cpp",
+                    "type": "file"
+                },
+                {
+                    "name": "lg_p3951.cpp",
+                    "path": "Files/LUOGU/lg_p3951.cpp",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "NOIP",
+            "path": "Files/NOIP",
+            "type": "directory",
+            "children": [
+                {
+                    "name": "2024-A.cpp",
+                    "path": "Files/NOIP/2024-A.cpp",
+                    "type": "file"
+                }
+            ]
+        },
+        {
+            "name": "dir_structure.json",
+            "path": "Files/dir_structure.json",
+            "type": "file"
+        }
+    ]
+}
