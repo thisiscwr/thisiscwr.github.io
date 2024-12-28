@@ -27,7 +27,7 @@ body {
 }
 
 header {
-  background: #32323200;
+  background: none;
   color: #ffffff;
   padding: 20px 0;
   text-align: center;
@@ -40,28 +40,6 @@ main {
   padding-bottom: 100px;
 }
 
-section.items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  padding-left: 15%;
-  padding-right: 15%;
-}
-
-article {
-  background: #323232d1;
-  border-width: 1px;
-  border: solid;
-  border-color: #8c8b8b;
-  margin: 10px;
-  padding: 15px;
-  padding-top: 5px;
-  border-radius: 5px;
-  color: #fffdfd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 0 0 calc(40%); /* 设置宽度为 40% */
-}
 
 .link {
   color: rgb(27, 204, 168);
@@ -134,8 +112,9 @@ footer {
   align-items: center;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: #cccccc69; /* 导航栏背景色 */
-  border-bottom: 1px solid #555;
+  background-color: none; /* 导航栏背景色 */
+  border-bottom: 2px solid #555;
+  border: 1px solid #ccc;
   color: #ffffff;
 }
 
@@ -151,6 +130,7 @@ footer {
   align-items: center; /* 垂直居中对齐 */
   padding: 5px 10px; /* 边框内边距 */
   border: 1px solid #555; /* 边框颜色 */
+  border-radius: 2px;
   margin-right: 8px; /* 与分隔符之间的间隔 */
   margin-left: 5px; /* 与分隔符之间的间隔 */
   color: #fcfcfc;

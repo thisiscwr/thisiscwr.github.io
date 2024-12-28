@@ -42,13 +42,13 @@ function handleParticle() {
     ) {
       particlesArray.splice(i, 1);
     }
-    for (var j = i; j < particlesArray.length; j++) {
+    for (var j = i+1; j < particlesArray.length; j++) {
       dx = particlesArray[i].x - particlesArray[j].x;
       dy = particlesArray[i].y - particlesArray[j].y;
-      long = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-      if (long < 150) {
+      long = Math.pow(dx, 2) + Math.pow(dy, 2);
+      if (long < 22500) {
         ctx.beginPath();
-        ctx.strokeStyle = "rgba(27, 204, 168," + (1 - long / 150) + ")";
+        ctx.strokeStyle = "rgba(27, 204, 168," + (1 - long / 22500) + ")";
         ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
         ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
         ctx.lineWidth = 0.5;

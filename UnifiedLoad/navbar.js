@@ -36,10 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <nav id="navbar">
             <ul>
                 <li><a href="${nowpath}" class="nav-link" >主页</a></li>
-                <li><a href="${nowpath}CodeEditor/" class="nav-link">代码编辑器</a></li>
-                <li><a href="${nowpath}MyFiles/" class="nav-link">个人文件</a></li>
+                <li><a href="${nowpath}CodeEditor/" class="nav-link">代码</a></li>
+                <li><a href="${nowpath}MyFiles/" class="nav-link">文件</a></li>
                 <li><a href="${nowpath}Games/" class="nav-link">游戏</a></li>
-                <li><a href="${nowpath}Updates/" class="nav-link">更新日志</a></li>
+                <li><a href="${nowpath}Updates/" class="nav-link">更新</a></li>
+                 <li><a href="${nowpath}About/" class="nav-link">关于</a></li>
             </ul>
         </nav>
     `;
