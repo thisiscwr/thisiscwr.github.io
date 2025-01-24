@@ -250,6 +250,11 @@
             "name": "dir_structure.json",
             "path": "Files/dir_structure.json",
             "type": "file"
+        },
+        {
+            "name": "Windows.zip",
+            "path": "Files/Windows.zip",
+            "type": "file"
         }
     ]
 }
