@@ -152,7 +152,7 @@ function copyFileLink(filePath) {
 function downloadFile(filePath) {
   if (window.location.host == "cwr.us.kg") {
     const a = document.createElement("a");
-    a.href="../../CwrPan"+filePath
+    a.href="../CwrPan"+filePath
     a.download = ""; // 设置下载属性
     document.body.appendChild(a);
     a.click(); // 模拟点击下载
