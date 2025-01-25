@@ -15,5 +15,6 @@
     "istream": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp"
-  }
+  },
+  "livePreview.defaultPreviewPath": "/index.html"
 }
