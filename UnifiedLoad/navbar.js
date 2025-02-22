@@ -22,10 +22,6 @@ function getRelativePath() {
   return relativePath || "./"; 
 }
 
-// 示例
-
-
-
 nowpath = getRelativePath();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,11 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <nav id="navbar">
             <ul>
                 <li><a href="${nowpath}" class="nav-link" >主页</a></li>
-                <li><a href="${nowpath}CodeEditor/" class="nav-link">代码</a></li>
                 <li><a href="${nowpath}MyFiles/" class="nav-link">文件</a></li>
                 <li><a href="${nowpath}Games/" class="nav-link">游戏</a></li>
                 <li><a href="${nowpath}Updates/" class="nav-link">更新</a></li>
-                 <li><a href="${nowpath}About/" class="nav-link">关于</a></li>
+                 <li><a href="${nowpath}Articles/" class="nav-link">文章</a></li>
             </ul>
         </nav>
     `;
