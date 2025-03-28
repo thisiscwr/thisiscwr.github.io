@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cwr's Files</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- 您的自定义样式 -->
+    <link rel="icon" href="favicon.ico" />
+    <script src="../UnifiedLoad/navbar.js" defer></script>
+    <script src="../UnifiedLoad/particle.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>个人云端文件</h1>
+    </header>
+    <canvas id="canvas"></canvas>
+    <div id="navigation-bar">
+      <div id="breadcrumb" class="breadcrumb"></div>
+    </div>
+
+    <div id="file-view">
+      <table>
+        <tbody id="file-list">
+          <!-- 文件和文件夹项将动态添加 -->
+        </tbody>
+      </table>
+    </div>
+
+    <div id="file-content" style="display: none">
+      <h1 id="file-title"></h1>
+      <div id="file-data"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; Cwr's Web 2025</p>
+    </footer>
+  </body>
+</html>

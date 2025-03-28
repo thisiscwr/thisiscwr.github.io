@@ -1,0 +1,12 @@
+{
+  "article1": {
+    "title": "前言",
+    "thetext": "介绍关于此网站",
+    "thelink": "Articles/0x00.html"
+  },
+  "article2": {
+    "title": "网站建立",
+    "thetext": "简单介绍如何建立此网站",
+    "thelink": "Articles/0x01.html"
+  }
+}

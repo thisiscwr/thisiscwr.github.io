@@ -1,0 +1,327 @@
+@font-face {
+  font-family: 'Consolas';
+  src: url('fonts/consolas.ttf') format('truetype');
+}
+
+pre, code {
+  font-family: 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #323232;
+  color: rgb(0, 140, 255);
+  padding-top: 60px; /* 留出空间给固定导航栏 */
+}
+
+header {
+  background: none;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+
+.link {
+  color: rgb(27, 204, 168);
+  text-decoration: none; /* 不显示下划线 */
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  padding-top: 30px;
+  background: #35424a00;
+  border-top: solid 1px #8c8b8b;
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: calc(40%);
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(80, 171, 150, 0.7); /* 半透明黑色背景 */
+  color: white; /* 字体颜色 */
+  z-index: 10; /* 确保在其他元素之上 */
+  display: flex; /* 使用 Flexbox */
+  justify-content: flex-start; /* 均匀分布按钮 */
+  align-items: center; /* 垂直居中 */
+  height: 60px; /* 设置固定高度 */
+  padding: 0 20px; /* 留出左右边距 */
+}
+
+#navbar ul {
+  list-style: none; /* 去掉默认的列表样式 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 使用 Flexbox，使列表项横向排列 */
+}
+
+#navbar li {
+  padding: 15px 20px; /* 设置按钮的内边距 */
+}
+
+#navbar a {
+  color: white; /* 链接颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  font-weight: bold; /* 加粗文字 */
+}
+
+#navbar a:hover {
+  text-decoration: underline; /* 鼠标悬停时加下划线 */
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+  border: #8c8b8b;
+  background-color: #32323200;
+}
+::-webkit-scrollbar-thumb {
+  background: #1bcca999;
+  border-radius: 2px;
+}
+
+#navigation-bar {
+  margin-top: 10px; 
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: none; /* 导航栏背景色 */
+  border-bottom: 2px solid #555;
+  border: 1px solid #ccc;
+  color: #ffffff;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  margin: 5px;
+}
+
+.breadcrumb-item {
+  display: inline-flex; /* 改为 inline-flex 以便与图标对齐 */
+  align-items: center; /* 垂直居中对齐 */
+  padding: 5px 10px; /* 边框内边距 */
+  border: 1px solid #555; /* 边框颜色 */
+  border-radius: 2px;
+  margin-right: 8px; /* 与分隔符之间的间隔 */
+  margin-left: 5px; /* 与分隔符之间的间隔 */
+  color: #fcfcfc;
+  cursor: pointer; /* 鼠标指针样式 */
+}
+
+.breadcrumb-arrow {
+  color: #ffffff; /* 分隔符颜色 */
+}
+
+#file-view {
+  border: 1px solid #ccc;
+  background-color: #f9f9f900;
+  
+  border-radius: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15px;
+  overflow-x: auto;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #e4e9f3;
+  padding: 10px;
+  text-align: left;
+  color: #1bcca8;
+  font-weight: bold;
+}
+
+td {
+  padding: 10px;
+  margin: 10%;
+  border-bottom: 1px solid #ddd;
+  color: #1bcca8a9;
+  background-color: #1a1b2600;
+}
+
+tr:hover td {
+  background-color: #1bcca976; /* 悬停效果 */
+  color: #ffffff;
+  cursor: pointer; /* 鼠标指针 */
+}
+
+#file-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#file-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+.action-button {
+  margin-left: 1px; /* 按钮之间的间距 */
+  padding: 5px 10px;
+  background-color: rgba(103, 178, 193, 0); /* 初始为透明 */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 平滑过渡效果 */
+}
+
+.action-button:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* 悬停时变为蓝色 */
+}
+/* 根据您希望改变的颜色进行调整 */
+
+
+
+
+code.hljs {
+  padding: 3px 5px;
+}
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+
+
+/*
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/
+/*  Comment */
+.hljs-meta,
+.hljs-comment {
+  color: #565f89
+}
+/* Red */
+/*INFO: This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red */
+.hljs-tag,
+.hljs-doctag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-template-tag,
+.hljs-selector-pseudo,
+.hljs-selector-attr,
+.hljs-variable.language_,
+.hljs-deletion {
+  color: #f7768e
+}
+/*Orange */
+/*INFO: Number and Boolean constants, Language support constants */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-number,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-link {
+  color: #ff9e64
+}
+/*  Yellow */
+/* INFO:  	Function parameters, Regex character sets, Terminal Yellow */
+.hljs-built_in,
+.hljs-attribute {
+  color: #e0af68
+}
+/* cyan */
+/* INFO: Language support functions, CSS HTML elements */
+.hljs-selector-tag {
+  color: #2ac3de
+}
+/* light blue */
+/* INFO: Object properties, Regex quantifiers and flags, Markdown headings, Terminal Cyan, Markdown code, Import/export keywords */
+.hljs-keyword,
+.hljs-title.function_,
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-subst,
+.hljs-property {
+  color: #7dcfff
+}
+/*Green*/
+/* INFO: Object literal keys, Markdown links, Terminal Green */
+.hljs-selector-tag {
+  color: #73daca
+}
+/*Green(er) */
+/* INFO: Strings, CSS class names */
+.hljs-quote,
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #9ece6a
+}
+/* Blue */
+/* INFO:  	Function names, CSS property names, Terminal Blue */
+.hljs-code,
+.hljs-formula,
+.hljs-section {
+  color: #7aa2f7
+}
+/* Magenta */
+/*INFO: Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta */
+.hljs-name,
+.hljs-keyword,
+.hljs-operator,
+.hljs-keyword,
+.hljs-char.escape_,
+.hljs-attr {
+  color: #bb9af7
+}
+/* white*/
+/* INFO: Variables, Class names, Terminal White */
+.hljs-punctuation {
+  color: #c0caf5
+}
+.hljs {
+  background: #1a1b26a3;
+  color: #9aa5ce
+}
+.hljs-emphasis {
+  font-style: italic
+}
+.hljs-strong {
+  font-weight: bold
+}

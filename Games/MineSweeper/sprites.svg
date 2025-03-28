@@ -1,0 +1,34 @@
+<svg version="1.1" id="svg4136" viewBox="0 0 120 120" height="120" width="120" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs4138">
+    <linearGradient id="linearGradient4730">
+      <stop style="stop-color:#ffffff;stop-opacity:1" offset="0" id="stop4734"></stop>
+      <stop id="stop4740" offset="0.5" style="stop-color:#ffffff;stop-opacity:1"></stop>
+      <stop style="stop-color:#000000;stop-opacity:1;" offset="1" id="stop4732"></stop>
+    </linearGradient>
+    <radialGradient gradientTransform="translate(-4.5,0.49999476)" gradientUnits="userSpaceOnUse" r="2.5" fy="944.86218" fx="17.5" cy="944.86218" cx="17.5" id="radialGradient4736" xlink:href="#linearGradient4730"></radialGradient>
+  </defs>
+  
+    
+  
+  <metadata id="metadata4141">
+    
+      
+        image/svg+xml
+        
+        
+      
+    
+  </metadata>
+  <g transform="translate(0,-932.36218)" id="layer1">
+    <rect y="937.36218" x="14" height="19.999998" width="2" id="rect4686" style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></rect>
+    <rect y="946.36218" x="5" height="2" width="20" id="rect4688" style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></rect>
+    <rect transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" y="679.4928" x="-669.2796" height="2" width="20" id="rect4688-0" style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></rect>
+    <rect transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)" y="658.2796" x="670.4928" height="2" width="20" id="rect4688-0-9" style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></rect>
+    <circle r="7" cy="947.36218" cx="15" id="path4726" style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></circle>
+    <circle r="2.5" cy="945.36218" cx="13" id="path4728" style="opacity:1;fill:url(#radialGradient4736);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></circle>
+    <path id="path4775" d="m 38,956.36218 0,-2 7,-2 0,-13 2,0 0,13 5,2 0,2 z" style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+    <path id="path4785" d="m 45,948.36218 -9,-4 9,-4 2,0 0,8 z" style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"></path>
+    <circle r="7" cy="947.36218" cx="75" id="path4726-5" style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"></circle>
+  </g>
+</svg>
+<!--rotationCenter:60:60-->

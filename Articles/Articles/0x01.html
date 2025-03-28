@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cwr's Web</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../../Pictures/favicon.ico" />
+    <script src="../../UnifiedLoad/navbar.js" defer></script>
+    <script src="../../UnifiedLoad/particle.js" defer></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <header>
+      <h1>关于网站-网站建立</h1>
+    </header>
+    <div class="content">
+      
+      
+      <p class="texts">在之后的文章中，我会分享我建立网站的过程，并且教大家如何从头开始建立网站。这里，我将简要讲一下我建网页的过程</p>
+      <h2 class="title">
+        第1步：本地编写网页
+      </h2>
+      <p class="texts">想要知道如何创建一个网页，首先要知道一点，就是网页和我们平常运行的程序是很不一样的。我们平常写的那些程序在网页上基本无法运行。所以第一步，就是要学会写网页</p>
+      <p class="texts">在这里给大家推荐一个自学编程的网址： https://www.runoob.com/  我就是在这里自学编程的</p>
+      <p class="texts">学习写网页是一个循序渐进的过程，是很考验耐心的。所以，建立一个网页，大部分时间都在写网页上。所以说，有一个很好的本地编码环境十分重要的</p>
+      <p class="texts">在这里，我给大家分享一下我的编码环境</p>
+      <p class="texts">首先，我这一台零几年的笔记本电脑并不能带动很多大型编辑器，因此，我使用的代码编辑器是VSCode。当然，我也是装了很多的插件，这样才能有一个比较好的体验</p>
+      <p class="texts">浏览器我选择Edge和Chrome，因为它有开发者模式(F12打开)，能够很快调试出来问题。相信大家应该都用这个吧</p>
+      <p class="texts">在准备好相关的工具后，就可以本地写网页了。本地将网页写好后，耗时最长的一步也就解决了。接下来的步骤比较复杂，需要梯子，有能力的可以试一下</p>
+
+      <h2 class="title">
+        第2步：上传网站
+      </h2>
+      <p class="texts">github是全球最大的开源网站，里面有非常多的开源项目。当然，由于github的服务器距离中国较远，连接很不稳定，一会能进，一会又不行。所以，注册一个github账号就比较复杂了</p>
+      <p class="texts">注册号github账号后，我们下载一个程序，叫做 github desktop 。在这个软件中，我们新建一个仓库，将我们写好的网页放到仓库中去。</p>
+      <p class="texts">接着，我们使用git(一个版本控制系统，帮助你在存储库中管理代码的不同版本。)将其本地记录一下，然后push到github仓库中去(也可以在github desktop中一键上传)。这样，我们的网站就已经保存在云端了</p>
+      <p class="texts">随后，我们使用github.io(能免费部署静态网站，使用github账号管理)部署你的网站，你就得到了一个网址为"[github用户名].github.io"的网站了</p>
+      <p class="texts">当然，github.io的服务器还是github.com，因此，这网站进去也是十分慢的，所以，我们需要别的服务器进行加速</p>
+
+      <h2 class="title">
+        第3步：网站加速
+      </h2>
+      <p class="texts">网络加速，我们需要用到Cloudflare的pages。Cloudflare是一家全球最著名的CDN加速服务商，提供了免费和付费的网站加速和保护服务。即使是免费版，也提供了比较全面和强大的功能，非常不错。</p>
+      <p class="texts">CDN的意思就是将别的服务器的文件下载到另一个地方的服务器，从而实现网络加速。比如pages，就是将距离我们很远的github.com的服务器，下载到Cloudflare的中国服务器中，实现网站加速</p>
+      <p class="texts">我们将pages连接到我们的github上的仓库中，然后就可以部署网站了。部署完Cloudflare的pages后，我们就得到了一个名为"[随意命名].pages.dev"的网站</p>
+      <p class="texts">其实这样已经够快了，但是可能名字不好记。于是，可以使用us.kg这个网站，去注册一个简单好记的名字，然后再将我们的网站放上去即可</p>
+
+      <h2 class="title">
+        总结
+      </h2>
+      <p class="texts">我这样讲看起来很容易，可是，我在部署的过程中也遇到了不小的麻烦，大概花了一天半的时间去部署网站。当然，只要你肯下功夫，拥有一个网站是很容易的！</p>
+      
+
+    </div>
+
+    <script>
+      // 获取所有类名为 'texts' 的元素
+      const textElements = document.querySelectorAll(".texts");
+
+      // 遍历每个元素并替换空格为 &nbsp;
+      textElements.forEach((element) => {
+        // 使用 innerHTML 替换内容
+        element.innerHTML = element.innerHTML.replace(
+          / /g,
+          "&nbsp;&nbsp;&nbsp;"
+        );
+      });
+    </script>
+
+    <footer>
+      <p>&copy; Cwr's Web 2024</p>
+    </footer>
+  </body>
+</html>

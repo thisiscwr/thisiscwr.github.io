@@ -1,0 +1,22 @@
+#winddows激活 和 office激活
+irm https://massgrave.dev/get | iex
+
+#Github
+QGBHFU72YLNAI34K
+
+#Zerotier
+
+Cwz_Linux
+10.147.19.109
+
+Cwz_iPhone
+10.147.19.11
+
+Cwr_Windows
+10.147.19.8
+
+Cwr_Honour
+10.147.19.16
+
+Cwz_Windows
+10.147.19.131
