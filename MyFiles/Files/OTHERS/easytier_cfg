@@ -1,0 +1,22 @@
+instance_name = "Thisiscwr"
+instance_id = "2fe2d203-bd35-4902-9df1-42404ffd0148"
+ipv4 = "192.168.6.11/24"
+dhcp = false
+listeners = [
+    "tcp://0.0.0.0:11010",
+    "udp://0.0.0.0:11010",
+    "wg://0.0.0.0:11011",
+]
+rpc_portal = "0.0.0.0:0"
+
+[network_identity]
+network_name = "Thisiscwr"
+network_secret = "123456"
+
+[[peer]]
+uri = "tcp://8.138.6.53:11010"
+
+[flags]
+enable_kcp_proxy = true
+latency_first = true
+relay_all_peer_rpc = true
