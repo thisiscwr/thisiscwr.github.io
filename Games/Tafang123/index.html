@@ -1,185 +1,804 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
-<!-- Mirrored from tafang123.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Mar 2025 02:58:12 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<meta http-equiv="Cache-control" content="no-cache" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>塔防游戏 Tower Defense</title>
-<meta name="keywords" content="塔防游戏，好玩的塔防游戏，炮塔防御2，塔防小游戏纪录" />
-<meta name="description" content="一张空白的地图，让怪兽按照你摆的炮塔的阵型来回移动，并且可以通过搭建和贱卖出口的炮塔，使怪兽来回移动，达到最长的移动距离，以便于炮塔不断的轰击怪兽。">
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="stylesheet" type="text/css" href="i/towerdefense.2.18.minfc6a.css?v=2024.8.16"></link>
-<script async id="g1" data-ad-client="ca-pub-5781698608883961"></script>
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线玩塔防游戏</title>
+  <meta name="keywords" content="塔防游戏,在线塔防游戏,免费塔防游戏,最佳塔防游戏,在线玩塔防游戏">
+  <meta name="description" content="一张空白的地图，让怪兽按照你摆的炮塔的阵型来回移动，并且可以通过搭建和贱卖出口的炮塔，使怪兽来回移动，达到最长的移动距离，以便于炮塔不断的轰击怪兽。">
+
+  <link rel="stylesheet" type="text/css" href="./styles/towerdefense.2.26.min.css">
+  <script src="./scripts/reactive_library_fy2021.js"></script>
+  <style data-id="immersive-translate-input-injected-css">
+    .immersive-translate-input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2147483647;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .immersive-translate-attach-loading::after {
+      content: " ";
+
+      --loading-color: #f78fb6;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      margin: 12px auto;
+      position: relative;
+      color: white;
+      left: -100px;
+      box-sizing: border-box;
+      animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-2000%, -50%);
+      z-index: 100;
+    }
+
+    .immersive-translate-loading-spinner {
+      vertical-align: middle !important;
+      width: 10px !important;
+      height: 10px !important;
+      display: inline-block !important;
+      margin: 0 4px !important;
+      border: 2px rgba(221, 244, 255, 0.6) solid !important;
+      border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+      border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+      animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+    }
+
+    @-webkit-keyframes immersive-translate-loading-animation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+
+      to {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+
+    @keyframes immersive-translate-loading-animation {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    .immersive-translate-input-loading {
+      --loading-color: #f78fb6;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      margin: 12px auto;
+      position: relative;
+      color: white;
+      left: -100px;
+      box-sizing: border-box;
+      animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+    }
+
+    @keyframes immersiveTranslateShadowRolling {
+      0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0),
+          0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+
+      12% {
+        box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0),
+          0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+
+      25% {
+        box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color),
+          0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+
+      36% {
+        box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color),
+          100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+      }
+
+      50% {
+        box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color),
+          110px 0 var(--loading-color), 100px 0 var(--loading-color);
+      }
+
+      62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color),
+          120px 0 var(--loading-color), 110px 0 var(--loading-color);
+      }
+
+      75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+          130px 0 var(--loading-color), 120px 0 var(--loading-color);
+      }
+
+      87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+          200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+      }
+
+      100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0),
+          200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+      }
+    }
+
+    .immersive-translate-toast {
+      display: flex;
+      position: fixed;
+      z-index: 2147483647;
+      left: 0;
+      right: 0;
+      top: 1%;
+      width: fit-content;
+      padding: 12px 20px;
+      margin: auto;
+      overflow: auto;
+      background: #fef6f9;
+      box-shadow: 0px 4px 10px 0px rgba(0, 10, 30, 0.06);
+      font-size: 15px;
+      border-radius: 8px;
+      color: #333;
+    }
+
+    .immersive-translate-toast-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .immersive-translate-toast-hidden {
+      margin: 0 20px 0 72px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .immersive-translate-toast-close {
+      color: #666666;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      .immersive-translate-toast {
+        top: 0;
+        padding: 12px 0px 0 10px;
+      }
+
+      .immersive-translate-toast-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .immersive-translate-toast-hidden {
+        margin: 10px auto;
+      }
+    }
+
+    .immersive-translate-dialog {
+      position: fixed;
+      z-index: 2147483647;
+      left: 0;
+      top: 0;
+      display: flex;
+      width: 300px;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: fit-content;
+      border-radius: 20px;
+      background-color: #fff;
+    }
+
+    .immersive-translate-modal {
+      display: none;
+      position: fixed;
+      z-index: 2147483647;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 15px;
+    }
+
+    .immersive-translate-modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 40px 24px 24px;
+      border-radius: 12px;
+      width: 350px;
+      font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+        "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+      position: relative;
+    }
+
+    @media screen and (max-width: 768px) {
+      .immersive-translate-modal-content {
+        margin: 25% auto !important;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .immersive-translate-modal-content {
+        width: 80vw !important;
+        margin: 20vh auto !important;
+        padding: 20px 12px 12px !important;
+      }
+
+      .immersive-translate-modal-title {
+        font-size: 14px !important;
+      }
+
+      .immersive-translate-modal-body {
+        font-size: 13px !important;
+        max-height: 60vh !important;
+      }
+
+      .immersive-translate-btn {
+        font-size: 13px !important;
+        padding: 8px 16px !important;
+        margin: 0 4px !important;
+      }
+
+      .immersive-translate-modal-footer {
+        gap: 6px !important;
+        margin-top: 16px !important;
+      }
+    }
+
+    .immersive-translate-modal .immersive-translate-modal-content-in-input {
+      max-width: 500px;
+    }
+
+    .immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+      text-align: left;
+      max-height: unset;
+    }
+
+    .immersive-translate-modal-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #333333;
+    }
+
+    .immersive-translate-modal-body {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #333333;
+      margin-top: 24px;
+      word-break: break-all;
+    }
+
+    @media screen and (max-width: 768px) {
+      .immersive-translate-modal-body {
+        max-height: 250px;
+        overflow-y: auto;
+      }
+    }
+
+    .immersive-translate-close {
+      color: #666666;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .immersive-translate-close:hover,
+    .immersive-translate-close:focus {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .immersive-translate-modal-footer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .immersive-translate-btn {
+      width: fit-content;
+      color: #fff;
+      background-color: #ea4c89;
+      border: none;
+      font-size: 14px;
+      margin: 0 8px;
+      padding: 9px 30px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .immersive-translate-btn-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .immersive-translate-btn:hover {
+      background-color: #f082ac;
+    }
+
+    .immersive-translate-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .immersive-translate-btn:disabled:hover {
+      background-color: #ea4c89;
+    }
+
+    .immersive-translate-link-btn {
+      background-color: transparent;
+      color: #ea4c89;
+      border: none;
+      cursor: pointer;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .immersive-translate-cancel-btn {
+      /* gray color */
+      background-color: rgb(89, 107, 120);
+    }
+
+    .immersive-translate-cancel-btn:hover {
+      background-color: hsl(205, 20%, 32%);
+    }
+
+    .immersive-translate-action-btn {
+      background-color: transparent;
+      color: #ea4c89;
+      border: 1px solid #ea4c89;
+    }
+
+    .immersive-translate-btn svg {
+      margin-right: 5px;
+    }
+
+    .immersive-translate-link {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      text-decoration: none;
+      color: #ea4c89;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .immersive-translate-primary-link {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      text-decoration: none;
+      color: #ea4c89;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .immersive-translate-modal input[type="radio"] {
+      margin: 0 6px;
+      cursor: pointer;
+    }
+
+    .immersive-translate-modal label {
+      cursor: pointer;
+    }
+
+    .immersive-translate-close-action {
+      position: absolute;
+      top: 2px;
+      right: 0px;
+      cursor: pointer;
+    }
+
+    .imt-image-status {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 16px !important;
+    }
+
+    .imt-image-status img,
+    .imt-image-status svg,
+    .imt-img-loading {
+      width: 28px !important;
+      height: 28px !important;
+      margin: 0 0 8px 0 !important;
+      min-height: 28px !important;
+      min-width: 28px !important;
+      position: relative !important;
+    }
+
+    .imt-img-loading {
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAtFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////oK74hAAAAPHRSTlMABBMIDyQXHwyBfFdDMSw+OjXCb+5RG51IvV/k0rOqlGRM6KKMhdvNyZBz9MaupmxpWyj437iYd/yJVNZeuUC7AAACt0lEQVRIx53T2XKiUBCA4QYOiyCbiAsuuGBcYtxiYtT3f6/pbqoYHVFO5r+iivpo6DpAWYpqeoFfr9f90DsYAuRSWkFnPO50OgR9PwiCUFcl2GEcx+N/YBh6pvKaefHlUgZd1zVe0NbYcQjGBfzrPE8Xz8aF+71D8gG6DHFPpc4a7xFiCDuhaWgKgGIJQ3d5IMGDrpS4S5KgpIm+en9f6PlAhKby4JwEIxlYJV9h5k5nee9GoxHJ2IDSNB0dwdad1NAxDJ/uXDHYmebdk4PdbkS58CIVHdYSUHTYYRWOJblWSyu2lmy3KNFVJNBhxcuGW4YBVCbYGRZwIooipHsNqjM4FbgOQqQqSKQQU9V8xmi1QlgHqQQ6DDBvRUVCDirs+EzGDGOQTCATgtYTnbCVLgsVgRE0T1QE0qHCFAht2z6dLvJQs3Lo2FQoDxWNUiBhaP4eRgwNkI+dAjVOA/kUrIDwf3CG8NfNOE0eiFotSuo+rBiq8tD9oY4Qzc6YJw99hl1wzpQvD7ef2M8QgnOGJfJw+EltQc+oX2yn907QB22WZcvlUpd143dqQu+8pCJZuGE4xCuPXJqqcs5sNpsI93Rmzym1k4Npk+oD1SH3/a3LOK/JpUBpWfqNySxWzCfNCUITuDG5dtuphrUJ1myeIE9bIsPiKrfqTai5WZxbhtNphYx6GEIHihyGFTI69lje/rxajdh0s0msZ0zYxyPLhYCb1CyHm9Qsd2H37Y3lugVwL9kNh8Ot8cha6fUNQ8nuXi5z9/ExsAO4zQrb/ev1yrCB7lGyQzgYDGuxq1toDN/JGvN+HyWNHKB7zEoK+PX11e12G431erGYzwmytAWU56fkMHY5JJnDRR2eZji3AwtIcrEV8Cojat/BdQ7XOwGV1e1hDjGGjXbdArm8uJZtCH5MbcctVX8A1WpqumJHwckAAAAASUVORK5CYII=");
+      background-size: 28px 28px;
+      animation: image-loading-rotate 1s linear infinite !important;
+    }
+
+    .imt-image-status span {
+      color: var(--bg-2, #fff) !important;
+      font-size: 14px !important;
+      line-height: 14px !important;
+      font-weight: 500 !important;
+      font-family: "PingFang SC", Arial, sans-serif !important;
+    }
+
+    .imt-primary-button {
+      display: flex;
+      padding: 12px 80px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+      background: #ea4c89;
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .imt-retry-text {
+      color: #999;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+      cursor: pointer;
+    }
+
+    .imt-action-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .imt-modal-content-text {
+      text-align: left;
+      color: #333;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    @keyframes image-loading-rotate {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    .imt-linear-gradient-text {
+      background: linear-gradient(90deg, #00a6ff 0%, #c369ff 52.4%, #ff4590 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .imt-flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .imt-linear-black-btn {
+      border-radius: 50px;
+      background: linear-gradient(66deg, #222 19%, #696969 94.25%);
+      height: 48px;
+      width: 100%;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: center;
+    }
+  </style>
+  <meta http-equiv="origin-trial"
+    content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+  <meta http-equiv="origin-trial"
+    content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+  <meta http-equiv="origin-trial"
+    content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial"
+    content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <meta http-equiv="origin-trial"
+    content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+  <link type="text/css" href="./styles/.css" rel="stylesheet">
+  <script async src="/i/ca-pub-5781698608883961"></script>
 </head>
-<body>
-<center>
-<div id="main">
-<div id="ra">
-<script async id="g2" crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:180px;height:640px"
-     data-ad-client="ca-pub-5781698608883961"
-     data-ad-slot="9488232077"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-<div id="rb">
 
-<h1><a href="index.html">塔防游戏在线玩</a></h1>
-<div class="w" id="level_nav">
-<a href="index.html">Random</a>&nbsp;
-<a href="primary/index.html">Primary</a>&nbsp;
-<a href="javascript:set_custom()">Custom</a>
-<div class="w" id="custom" style="display:none;">
-<label for="x1">Start X:</label><input id="x1" type="number" value="1" min="1" max="16">
-<label for="y1">Start Y:</label><input id="y1" type="number" value="1" min="1" max="16">
-<label for="x2">End X:</label><input id="x2" type="number" value="16" min="1" max="16">
-<label for="y2">End Y:</label><input id="y2" type="number" value="16" min="1" max="16">
-<button onclick="custom()">submit</button>
-</div>
-</div>
-<div id="wrapper">
-<div style="display: block;" id="td-loading">
-<div id="loading"><div class="loading-spinner"></div><div id="loading-info"></div></div>
-<span id="info"><span>
-</div>
-<div style="display: none;" id="td-board"><canvas>HTML 5 Canvas Needed</canvas></div>
-</div>
-	
-</div><!--rb-->
-<div id="rc">
-<!---->
-<script async id="g3" crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:inline-block;width:180px;height:640px"
-     data-ad-client="ca-pub-5781698608883961"
-     data-ad-slot="9488232077"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<body style="background-color: rgb(247, 247, 247); color: black; padding: 0px;">
+  <center style="height: auto !important;">
+    <div id="main">
+      <div id="ra">
 
-</div><!--rc-->
-</div><!--mian-->
+      </div>
+      <div id="rb">
+        <h1><a href="/">在线玩塔防游戏</a></h1>
+        <h2><a href="/">（第一次加载可能会很久，请耐心等待）</a></h2>
+        <div class="w" id="level_nav">
 
-<div class="w">
-<div id="night" class="fl">
-<svg id="moon" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-</svg>
-<svg id="sun" style="display:none" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-</div>
+          <div class="w" id="custom" style="display:none;">
+            <input id="langdir" type="hidden" value="zh_hans/">
 
+            <button onclick="custom()">提交</button>
+          </div>
+        </div>
+        <div id="wrapper">
+          <div style="display: none;" id="td-loading">
+            <div id="loading">
+              <div class="loading-spinner"></div>
+              <div id="loading-info"></div>
+            </div>
+            <span id="info">正在加载，请稍后...</span>
+          </div>
+          <div style="display: block;" id="td-board"><canvas width="687.6" height="600.46"
+              style="width: 687.6px; height: 600.46px;">HTML 5 Canvas Needed</canvas></div>
+        </div>
 
-<span class="user"><a id="record" href="record/index.html"  class="bubbly-button">RECORD</a>&nbsp;&nbsp;
-<a id="top" href="top/index.html">TOP100</a>&nbsp;&nbsp;
-<svg xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-<label id="uid"></label><label id="tip"></label>
-</span>
+      </div><!--rb-->
+      <div id="rc">
+
+      </div><!--rc-->
+    </div><!--mian-->
+
+    <div class="w">
+      <div id="night" class="fl">
+        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg id="sun" style="display: block;" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </div>
 
 
-<div id="volume" class="fr">
-<svg id="volumeonicon" xmlns="http://www.w3.org/2000/svg"  width="4vh" height="4vh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-<svg id="volumeofficon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-</div>
-</div>
+      <span class="user"><a id="record" href="./html/record.html" class="bubbly-button">游戏记录</a>&#160;&#160;
+        <a id="top" href="./html/top.html">TOP100排行榜</a>&#160;&#160;
+        <svg xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-user">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <label id="uid">匿名</label><label id="tip">👈点击可改</label>
+      </span>
+
+
+      <div id="volume" class="fr">
+        <svg id="volumeonicon" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+          style="display: none;">
+          <path
+            d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+        </svg>
+        <svg id="volumeofficon" style="display: block;" xmlns="http://www.w3.org/2000/svg" width="4vh" height="4vh"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+        </svg>
+      </div>
+      <br><br>
+      <a class="o" href="/?lang=zh&do=sethome">Display this language on the homepage</a>
+    </div>
+
+    <div class="w l ranklist">
+      <div class="level">
+        <div class="title">波次</div>
+        <table id="wave-rank-list">
+          <tbody>
+            <tr>
+              <th>No</th>
+              <th>name</th>
+              <th>wave</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="level">
+        <div class="title">金钱</div>
+        <table id="money-rank-list">
+          <tbody>
+            <tr>
+              <th>No</th>
+              <th>name</th>
+              <th>money</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="level">
+        <div class="title">分数</div>
+        <table id="score-rank-list">
+          <tbody>
+            <tr>
+              <th>No</th>
+              <th>name</th>
+              <th>score</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <span id="videolist"></span>
+    <div class="w l" style="height: auto !important;">
+      <p><b>玩法说明:</b> 一张空白的地图，让怪兽按照你摆的炮塔的阵型来回移动，并且可以通过搭建和贱卖出口的炮塔，使怪兽来回移动，达到最长的移动距离，以便于炮塔不断的轰击怪兽。</p>
+      <p>
+        <b>高阶玩法提示:</b>
+        选择武器并部署到地图后，怪物将从白色圆圈生成并向黑色圆圈移动。提供三种武器类型：轻机枪、重机枪和加农炮，另设有可充当"防御塔"的路障。首要任务是通过建造路障墙限制怪物行进路线，策略性布置防御塔。可随时用武器替换路障或升级现有武器，所有武器会自动攻击射程内的怪物。点击选择面板空白处退出建造模式，点击怪物可集火攻击。"金币"用于购买武器/路障，消灭怪物可增加金币。"生命值"会因怪物抵达终点而减少，拆除任何防御塔可返还50%金币。
+      </p>
+
+      <p><b>温馨提示：</b>抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活。</p>
+
+      <p><b>游戏类：</b>
+        <a href="./html/www.saolei123.com.html" target="_blank">扫雷游戏</a>
+        <a href="./html/www.zhaosecha.com.html" target="_blank">找色差小游戏</a>
+        <a href="./html/supermario.net.html" target="_blank">超级玛丽</a>
+        <a href="./html/schulte.top.html" target="_blank">舒尔特方格游戏</a>
+        <a href="./html/2048123.com.html" target="_blank">2048小游戏</a>
+        <a href="./html/www.jxgame.net.html" target="_blank">精选游戏</a>
+      </p>
+      <p><b>友情连接：</b>
+        <a href="./html/www.24time.org.html" target="_blank">全球时区</a>
+        <a href="./html/www.waihui123.com.html" target="_blank">外汇牌价网</a>
+        <a href="./html/www.yuncesu.net.html" target="_blank">网络测速</a>
+        <a href="./html/www.bjtime.net.html" target="_blank">北京时间</a>
+        <a href="./html/www.p314.net.html" target="_blank">在线圆周率</a>
+        <a href="./html/www.rand8.com.html" target="_blank">随机数生成器</a>
+      </p>
+    </div>
+
+    <br>
+    <br>
+    <div class="w l">
+      <h2>SITE LINK</h2>
+      <p>
+        <a href="./html/minesweeper.top.html" target="_blank">MinesWeeper</a> —
+        <a href="./html/sudokupuzzle.net.html" target="_blank">SudokuPuzzle</a> —
+        <a href="./html/supermario.net.html" target="_blank">SuperMario</a> —
+        <a href="./html/snake123.com.html" target="_blank">SnakeGame</a> —
+        <a href="./html/www.tetris123.com.html" target="_blank">tetris</a> —
+        <a href="./html/24time.org.html" target="_blank">24time</a> —
+        <a href="./html/rand8.com.html" target="_blank">Random Number Generator</a>
+      </p>
+    </div>
 
 
 
-<div class="w l">
-<p><b>怎么玩：</b>一张空白地图，让怪兽按照你摆的炮塔的阵型来回移动，可以通过搭建和贱卖炮塔，使怪兽来回移动，达到最长的移动距离，以便于炮塔不断的轰击怪兽。</p>
-<p><b>如何玩：</b>怪物会从白色圆圈出现，在你从面板选择武器并将其放置在地图上后，它们会朝着黑色圆圈前进。有三种武器：轻机枪、重机枪和大炮。还有一种路障。它们被视为“塔”。你首先需要建造一些路障墙来限制怪物的路线。安排塔的布局以取得良好的防御效果。你可以用武器替换路障，或者将一种武器升级成另一种。武器会在它们有效范围内自动射击怪物。点击选择面板的空白区域，取消建造模式进入普通模式。点击一个怪物将集中火力攻击它。“金钱”用来购买武器和路障，并且在杀死一个怪物时会增加。当怪物到达目的地时，“生命值”会减少。你可以移除任何塔，并取回半数价格的金钱。</p>
-<p><b>温馨提示：</b>抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活。</p>
+    <div class="w">
+      <p>QQ群：167016603</p>
+    </div>
+    <hr class="w">
+    <div class="w">
+      <a href="./html/basic_formula.html">基础公式</a>
+      <a href="./html/shortcut.html">快捷操作</a>
+      <a href="./html/about.html">关于我们</a>
+      <a href="./html/contact.html">联系我们</a>
+      <a href="./html/policy.html">隐私政策</a>
+      <p>@ tafang123.com Version：<span id="ver">2.26</span> (Kernel:1.16)</p>
+    </div>
+    <script>
+      var LANG = {
+        "language": "zh",
+        "name": "匿名",                                                                    //昵称:匿名
+        "tip": "👈点击可改",                                                                      //点击可修改👉 👈  👆 👇
+        "lose": "再接再厉",                                                      //'没有上榜，再接再厉！'
+        "win": "恭喜你，本周排第${x}名!",                                        //'恭喜你，本周排第x名'
+        "err_name": "匿名网友不参与排名，请修改昵称!",  //匿名网友不参与排名，请修改昵称。！
+        "err_scorelow": "分数太低",                                                 //分数太低
+        "err_coinslow": "金币太低",                                                 //金币太低
+        "start_button": "重启",
+        "uploading": "正在上传，请稍后...",
+        "loading": "正在加载，请稍后..."
+      };
+    </script>
+    <script src="./scripts/towerdefense.2.26.min.js"></script>
+    <script async>
+      var g1 = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+      var g2 = g1 + "?client=ca-pub-5781698608883961";
+      window.onload = function () {
+        $("info").innerHTML = LANG.loading;
+        _TD.init("td-board", true);                //是否开启调试  
+        $("td-loading").style.display = "none";   //默认：none  block
+        $("td-board").style.display = "block";    //默认：block  
+        $("ver").innerHTML = S.ver;               //设置版本号 
 
-<script async id="g4"  crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5781698608883961"
-     data-ad-slot="8774548413"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+        // 保持屏幕常亮
+        document.body.style.webkitKeepScreenOn = true;
+        document.body.style.mozKeepScreenOn = true;
+        document.body.style.msKeepScreenOn = true;
+        document.body.style.oKeepScreenOn = true;
 
-<p><b>游戏类：</b>
-<a href="https://www.saolei123.com/" target="_blank">扫雷游戏</a>
-<a href="https://www.zhaosecha.com/" target="_blank">找色差小游戏</a>
-<a href="https://supermario.net/" target="_blank">超级玛丽</a>
-<a href="https://schultegrid.net/" target="_blank">舒尔特方格游戏</a>
-<a href="https://2048123.com/" target="_blank">2048小游戏</a>
-<a href="https://www.jxgame.net/" target="_blank">精选游戏</a>
-</p>
-<p><b>友情连接：</b>
-<a href="https://www.24time.org/" target="_blank">全球时区</a>
-<a href="https://www.waihui123.com/" target="_blank">外汇牌价网</a>
-<a href="https://www.yuncesu.net/" target="_blank">网络测速</a>
-<a href="https://www.bjtime.net/" target="_blank">北京时间</a>
-<a href="https://www.p314.net/" target="_blank">在线圆周率</a>
-<a href="https://www.rand8.com/" target="_blank">随机数生成器</a>
-</p>
+        $("g1").src = g1; $("g2").src = g2; $("g3").src = g2; $("g4").src = g2;
+      };
 
-</div>
-<span id="videolist"></span>
-<br>
-<br>
-<div class="w">
-<p>QQ群：167016603</p>
-</div>
-<hr class="w">
-<div class="w">
-<a href="basic_formula/index.html">基础教程</a>  
-<a href="shortcut/index.html">加入桌面</a>  
-<a href="about/index.html">关于我们</a>  
-<a href="guest/index.html">反馈信息</a>
-<a href="policy/index.html">隐私政策</a>
-<p>@ tafang123.com  Version：<span id="ver">2.20<span></p>
-</div>
-</center>
-<script async src="i/towerdefense.2.21.mineae3.js?v=2024.12.26"></script>
-<script async>
-var g1="../pagead2.googlesyndication.com/pagead/js/f.txt";
-var g2="../pagead2.googlesyndication.com/pagead/js/fe356.txt?client=ca-pub-5781698608883961";
-window.onload = function () {
-  $("info").innerHTML = LANG.loading;
-  _TD.init("td-board",true);                //是否开启调试  
-  $("td-loading").style.display = "none";   //默认：none  block
-  $("td-board").style.display = "block";    //默认：block  
-  $("ver").innerHTML = Send.ver;            //设置版本号 
-  
-  // 保持屏幕常亮
-  document.body.style.webkitKeepScreenOn = true;
-  document.body.style.mozKeepScreenOn = true;
-  document.body.style.msKeepScreenOn = true;
-  document.body.style.oKeepScreenOn = true; 
-  
-  $("g1").src = g1;$("g2").src = g2;$("g3").src = g2;$("g4").src = g2;
-};
-</script>
-<!--policy start-->
-<div id="cookies-policy-popup">
-This website uses cookies to deliver the best possible user experience. You can read more about this in our <a href="policy/index.html">Privacy Policy</a>. &nbsp; <span>OK</span>
-</div>
-<script>
-    var el = document.getElementById('cookies-policy-popup');
-    if (!localStorage.getItem('cookies2')) {
+
+    </script>
+    <!--policy start-->
+    <div id="cookies-policy-popup" class="fadein">
+      This website uses cookies to deliver the best possible user experience. You can read more about this in our <a
+        href="./html/policy.html">Privacy Policy</a>. &#160; <span>OK</span></div>
+    <script>
+      var el = document.getElementById('cookies-policy-popup');
+      if (!localStorage.getItem('cookies2')) {
         setTimeout(function () {
-            el.classList.add('fadein');
+          el.classList.add('fadein');
         }, 2000);
         el.querySelector('span').onclick = function () {
-            localStorage.setItem('cookies2', 1);
-            el.parentNode.removeChild(el);
+          localStorage.setItem('cookies2', 1);
+          el.parentNode.removeChild(el);
         };
-    } else {
+      } else {
         el.parentNode.removeChild(el);
-    }
-</script>
-<!--policy end-->
-
-<script src="i/start2f76.js?v=2024.10.6"></script>
-<!---->
+      }
+    </script>
+    <!--policy end-->
+    <script src="./scripts/start.js"></script>
+    <script type="text/javascript" src="./scripts/21287335.js"></script><img src="/@tafang123" alt="tafang123">
+  </center>
+  
 </body>
-<!-- Mirrored from tafang123.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Mar 2025 02:58:16 GMT -->
+<div id="immersive-translate-popup" style="all: initial"></div><iframe id="google_esf" name="google_esf"
+  src="https://googleads.g.doubleclick.net/pagead/html/r20251118/r20190131/zrt_lookup_fy2021.html"
+  style="display: none;"></iframe>
+
 </html>
